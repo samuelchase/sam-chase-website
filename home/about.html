@@ -1,0 +1,137 @@
+
+<html>
+<style>
+body {
+	background-repeat:no-repeat;
+	background-position: center center;
+}
+
+.center {
+	display: block;
+	width: 700px;
+	margin: 1em auto;
+	text-align: justify;
+	font-size: 20px;
+	color: #FFF;
+	position: relative;
+  	top: 50%;
+	z-index: 100;
+}
+
+.veil {
+	width: 100%;
+	margin-left: -10px;
+	opacity: 1.0;
+	position: absolute;
+	z-index: 1;
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(images/stars.png) repeat top center;
+  z-index:20;
+}
+
+.twinkling{
+  background:transparent url(images/twinkling.png) repeat top center;
+  z-index:30;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background:transparent url(images/clouds.png) repeat top center;
+    z-index:40;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
+
+</style>
+
+<body>
+<div>
+	<div class="veil">
+	<div class="stars"></div>
+	<div class="twinkling"></div>
+	<div class="clouds"></div>
+	<div class="center" style="margin-top:150px;">
+
+    <H1 style="text-align:center"> Hi I'm Sam! </H1>
+    <p>
+      TLDR; I live in Brooklyn, and have a love for good food, nature, conciousness and technology. I develop all over the stack from data science and visualization work, to mobile client and web clients. I love to write poetry and read the ancient scriptures of India, as well as study the mind and human behavior.<br>
+      <br>
+      <br>
+      I grew up in New Haven, CT, and spent a good bit of my time in the woods in Deep River, CT. Somehow I have always gotten to see both sides of the coin in my life. I went to Wilbur Cross Highschool through a metal detector, and worked catering at Yale University to pay my gas bills as a young man. On the flip side I sailed competitively in Newport RI, and was able to take classes at Yale as a highschool student. <br>
+      <br>
+      My alma mater is Pomona College, there I learned a lot about who I am, found my wonderful wife Tulsi, and got a double major in Cognitive Science/Linguistics and Computer Science. Pomona college was truly a wonderful undergraduate experience. I think to most of us alumni it is something of a dream now, small class sizes, a campus like a country club, an incredibly smart student body. I am very grateful for the opportunity and funding Pomona gave me to get my degree there. <br>
+      <br>
+      After school I worked for ESRI a GIS (Geographical Information Systems) behemoth, and the second larges private software company in the world. I learned what it meant to write production level code for a large company there. I also learned what an older company looks like, the structure required to keep things steady, but also the slower pace a giant walks at. I did some iOS engineering there, ate the best oranged in the world in Redlands, CA. And visited often my former campus and wife to be. I quickly saw however that I was too young for the environment there. ESRI is a place where status was attached to the amount of time you had worked there, and climbing the ladder in many ways meant slowly building up respect and a presence over years. I think it has changed some since I left, but at 22 I wanted to take a risk and do something more fastpaced.  <br>
+      <br>
+      I found my stride in startups. Joining two founders working out of the incubator StartEngine in L.A., we created an Ad Tech company that let small and mid-level businesses get in on the action of mobile advertising. At the majority of ad campaign were either big brand awareness campaigns, CPA campaigns, or install campaigns. Using location we were able to target ads, right outside a store front, in a mall complex, even the superbowl. It was an exciting time for me as it was the first time I was given the responsibility of running the tech side of a business and building a team. We built a web application that helped smaller businesses auto-generate animated banners, and landing pages, and then went and served those ads, through RTB (Real Time Bidding). Once we had our product working, it was an incredible power to have, to pick anywhere in the U.S. and inject whatever content you wanted into the phones of the people there. <br>
+      Ad Tech was never my life's passion, but I learned a huge amount building that technology stack and team. We went from 3 people working out of a closet to 40+ people with a view of the ocean from our office. I personally had 12 engineeers under me and managed all operations of the tech side of the business. In the end we did not raise the money we needed to keep the business going, though profitable after the first 3 months, we over extended ourselves, and hired poorly on the sales side. I'll put post mortem up on my site here shortly, for those interested in the gritty details of Nearwoo/Adnucleus' slow decline. <br>
+      <br>
+      Personal problems between the founders and the writing on the wall, I reevaluated my life. What was important to me? Is the american dream a real thing, or a false promise? I quickly realized that you need a lot more than a decent idea and hard work to make a startup succeed. Timing, a great strategy, a network of experienced brilliant people, and a great idea are the minimum requirements. On top of that add a good bit of luck. <br> I took the opportunity to go to India and get married, and then move to NY. It was an incredible and life changing event. Our friends and family came form all over the world to participate, 500hrs of footage were shot, 2 trucks of alcohol were consumed, and 3 days of non-stop dancing and enjoyment. <br>
+      <br>
+      Finally back on the East Coast! I joined Wildcard in April of 2015. Wildcard had all the signs of a succesful startup. ~10 million in funding, extremely smart founders who had previously exited, and a deadly engineering team. At Wildcard I found myself, cementing my technical knowledge, and jumping all over the stack. I learned a huge amount and got to play with all sorts of technology. I did everyting from data science, to platform engineering, even a little beautiful iOS client work. After a good year of work there Wildcard is going a different direction. You can read about it here: <a href=""> </a> . Currenlty I am contracting in Health-Tech, and learning about that industry, and strategizing on what to do next. I wouldn't trade my experiences thus far, they have taught me a tremendous amount and supported me. I am happy living in BK, my wife and I have been building wonderful community, and taking in the wealth of knowledge and experience the city has to provide. Stay tuned to see what happens next ;)
+
+    </p>
+	</div>
+</div>
+
+
+
+
+
+</body>

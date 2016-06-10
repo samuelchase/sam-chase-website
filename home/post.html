@@ -1,0 +1,132 @@
+
+<html>
+<style>
+body {
+	background-repeat:no-repeat;
+	background-position: center center;
+}
+
+.center {
+	display: block;
+	width: 500px;
+	margin: 1em auto;
+	text-align: center;
+	font-size: 20px;
+	color: #FFF;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+	z-index: 100;
+}
+
+.veil {
+	width: 110vw;
+	height: 100vh;
+	margin-left: -10px;
+	opacity: 1.0;
+	position: absolute;
+	z-index: 1;
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(images/stars.png) repeat top center;
+  z-index:20;
+}
+
+.twinkling{
+  background:transparent url(images/twinkling.png) repeat top center;
+  z-index:30;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background:transparent url(images/clouds.png) repeat top center;
+    z-index:40;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
+
+</style>
+
+<body>
+<div>
+	<div class="veil">
+	<div class="stars"></div>
+	<div class="twinkling"></div>
+	<div class="clouds"></div>
+	<div class="center">
+		<H1> Programs of the Mind </H1>
+		<h3>Mind, Machine, and Spirit </h3>
+		<p>
+				 
+		In my senior year of highschool I got to take a class at Yale University, this was a special program for public school kids in New Haven, basically one of many retributions for Yale not paying any property tax. I took Intro to Cognitive Science and it blew my mind. The class was as much about computation as it was about the mind, though I didn&#39t understand it at the time. Underpinning the lecturers points and desires was the following set of beliefs and facts. The mind consists of algorithmic processes just like a computer, which are executed on neurons, instead of silicon gates. Algorithms, are a set of logic which can be enacted on any substrate, that is the underlying material is not coupled to the algorithm. And this is a fact, the Turing machine is just that the abstract representation of the means necessary for any computation. So your database logic could be stored and retrieved, on a disk, a series of tubes, even a very complex lego set.  INSERT XKCD COMIC It&#39s all about the algorithms not the stuff.
+		When you bring this concept to cognitive science and AI it gets really interesting. If you can create a computer from legos, what about a human brain? Sounds crazy right? One of my favorite thought experiments is this. Imagine we developed a perfect hardware  neuron, something that replicated a single neurons behavior perfectly. If we replaced one neuron in someone&#39s head with one of these would the mental processes and thinking change? What about if we replaced a 100? 200? All of them? You get the picture. It&#39s all about the algorithms not the stuff. Of course the thought experiment is an oversimplification, that&#39s what thought experiments are. But personally, I believe our own biological hardware, while extremely cool and well designed by evolution is just that hardware. It only comes to life when we human algorithmic processes start to take place. 
+		This is one of the reasons I chose to get a computer science degree, while later it became both a fascination and a lucrative skill, understanding and working with internals of the computer I felt would give me a better handle on the how the mind might work, than just pontification and external testing of cognitive science alone. While it is interesting to present stimuli and see where in the brain lights up, that is like seeing that the camera is recording when using facetime. It tells you a little bit what Facetime uses, but nothing truly about how it works. You cannot look at the resources a computer uses and deduce the logic the code is executing (except for in a handful of cases). This is the state of Neuroscience and cognitive science, where we are relying on visualization of oxygenating components of the brain through fMRI. 
+		So what do we do? I think we made a huge mistake as a scientific society, when we threw out introspection. While it is certainly the case that you cannot treat introspection, the way you can hard verifiable and repeatable scientific evidence, it does not mean it is not of value. And in truth our subjective experience seeps into everything we do, even science. A history of religious war, corruption, and dogma, has scared the intellectual today away from the more introspective forms of experimentation, and this to me is a tragedy. For the discovery and understanding of our internal algorithms is in my opinion the most important work both personal and for society as a whole.
+		Vedic civilization, has a great wealth of knowledge of in this department. Unfortunately for most of us it is couched, in a language of mythology and cultural references that event those well versed in the ancient texts do not fully understand, let alone the average individual. Nevertheless a very diluted form of this wisdom comes to us in the U.S. from Yoga and meditation. Vedic society was actually a very scientific society, in all areas, from their Ayurvedic sciences of health, to Sanskrit to Yoga. All of these techniques are the result of experimentation and introspection, and are increasingly turned to where western scientific knowledge of the mind fails us, in our actual day to day reality and needs for self-actualization. Nevertheless we are all reading in translation, even the teachers who have a studied Sanskrit for years, cannot understand the cultural references of thousands of years ago. 
+		We need to develop our own system of using introspection in combination with scientific method and objective truths to create a language with which we can discuss the algorithms of our minds. I think a lot of us could use a little defragmentation, and to kill a zombie processes of the mind. It is wholly within our capability, but for most completely unclear how to achieve.
+
+		</p>
+		<H4 style="margin-top:30px;"> More thoughts coming soon... </H4>
+	</div>
+</div>
+
+
+
+
+
+</body>

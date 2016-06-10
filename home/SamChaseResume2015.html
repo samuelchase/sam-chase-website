@@ -1,0 +1,861 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
+<!-- 	<title>Sam Cunningham</title>
+ -->	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	
+
+	<style>
+	body, html {
+  padding-top:2.5em;
+  margin:0;
+  background-color:#fafafa;
+}
+
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-family: "Open Sans";
+  font-size: 0.6em;
+}
+
+.new {
+  background-color: #81C784;
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
+
+}
+
+/* Header */
+
+header {
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+ 
+}
+
+.header-content {
+  display: inline-block;
+}
+
+.pic {
+  margin: 0 auto;
+  margin-top:-2.5em;
+  
+  border-radius:10em;
+  height:4em;
+  width:4em;
+  
+  border: 2px solid #e0e0e0;
+  transition : all 0.5s linear;
+  
+}
+
+@-webkit-keyframes wiggle {
+  0%   {
+    transform: rotate(0deg);
+  }
+  25%  {
+    transform: rotate(-30deg);
+  }
+  50%  {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pic:hover {
+  /*Webkit fix*/
+  -webkit-transform: translateZ(0);
+  
+  cursor:pointer;
+  
+  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.header-text {
+  margin-top:0.5em;
+  margin-left:1em;
+}
+
+header p {
+  text-align:center;
+  font-family: "Merriweather";
+  
+  margin:0;
+  
+  color: #212121;
+}
+
+.first-name {
+   font-size: 1.05em;
+}
+
+.subtitle {
+  font-family: "Merriweather";
+  padding-top:.3em;
+  font-size:0.55em;
+  font-weight:500;
+  color: #424242;
+}
+
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+  
+  background-color:white;
+  width:60%;
+  
+  padding:0.5em 0 0.5em 0;
+  
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 3px solid #e0e0e0;
+  border-radius:3px;
+}
+
+@media(max-width:992px) {
+  .paper {
+    width:80%;
+  }
+}
+
+/* Content Part */
+
+.content-wrapper {
+  padding-right:7.25%;
+}
+
+.content {
+  display:table;
+  width:100%;
+  
+  padding-top:1.5em;
+  
+  /*border-top: 1px solid #eeeeee;*/
+}
+
+.content:last-child {
+  margin-bottom: 2em;
+}
+
+body > div > article > div > section:last-child {
+  padding-bottom:1.5em;
+}
+
+.row {
+    display:table-row;
+}
+.row div {
+    display:table-cell;
+}
+
+.content-cat {
+  font-family: "Merriweather";
+  font-variant:small-caps;
+  font-weight:300;
+  letter-spacing: 1px;
+  
+  color: #212121;
+  
+  font-size:0.975em;
+  
+  text-align:center;
+  vertical-align:middle;
+
+  padding-left:6.66%;
+  width:30%;
+}
+
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+  
+  margin-bottom:0;
+}
+
+.content-text {
+  border-left:1px solid #e0e0e0;
+  transition: border 0.66s ease-in;
+}
+
+.big-text {
+  vertical-align:top;
+}
+
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+  
+  width:85%;
+  margin-left:1.5em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  display:inline-block;
+  
+}
+
+.content-text ul li:first-child {
+  width:35%;
+  
+  color: #424242;
+  
+  font-weight:600;
+}
+
+.content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
+  text-decoration: none;
+  color: #0277bd;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.work-listing p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  color: #424242;
+  
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.work-listing.education-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.work-listing .highlight {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+  
+  color: #424242;
+  
+  margin-left:3.25em;
+  padding-left:0.5em;
+  
+  border-left:1px solid #e0e0e0;
+  
+}
+
+.education-listing > .heading {
+  font-weight:600;
+  
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.profiles-listing ul li, .profiles-listing ul li:first-child {
+  width:32%;
+  font-weight: normal;
+}
+
+.work-content, .education-content {
+  padding-top: .75em;
+}
+
+section.content.education-content > div > div.content-cat {
+  vertical-align: top;
+}
+
+div.content-text.skills-listing > p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 2em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.skills-listing > p > {
+  color:#212121;
+}
+
+
+	</style>
+
+	<style media="print">
+	
+body, html {
+  background-color: white;
+  padding-top: 1.5em;
+}
+
+.paper {
+  width:100%;
+  border: 0;
+
+  padding-top: 0;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.header-pic {
+  float:left;
+}
+
+.profiles {
+  display:none;
+}
+
+.content {
+  page-break-inside:avoid; 
+  page-break-after:auto;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.6em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 2em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
+}
+
+.content-cat {
+  width:33%;
+  color:black;
+  text-align: left;
+}
+
+.content-cat p {
+  font-size:0.6em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:black;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
+}
+
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
+}
+	</style>
+	
+	</head>
+	<body>
+
+		<div class="resume-wrapper">
+		  <article class="paper">
+			    <header>
+			      <div class="header-content">
+			        <div class="header-pic" title="Wiggle Wiggle">
+			          <img src="sam.jpg" class="pic" />
+			        </div>
+			        <div class="header-text">
+			          <p>
+			            Sam Chase
+			          </p>
+			          <p class="subtitle">Senior Engineer</p>
+			        </div>
+			      </div>
+			    </header>
+			    <div class="content-wrapper">
+			    
+			      <!-- CONTACT -->
+			      <section class="content">
+			        <div class="row">
+			          <div class="content-cat">
+			           Contact
+			          </div>
+			          <div class="content-text">
+
+				            <ul>
+				              <li>Email</li>
+				              <li>sam.chase@gmail.com</li>
+				            </ul>
+
+				            <ul>
+				              <li>Phone</li>
+				              <li>(646) 659-2492</li>
+				            </ul>
+			          </div>
+			        </div>
+			      </section>
+
+			      <!-- LOCATION -->
+					      <section class="content">
+					        <div class="row">
+					          <div class="content-cat">
+					           Location
+					          </div>
+					          <div class="content-text">
+
+						            <ul>
+						              <li>Address</li>
+						              <li>555 Eastern Pkwy APT 3D</li>
+						            </ul>
+
+							            <ul>
+							              <li>Postal Code & City</li>
+							              <li>11216 Brooklyn</li>
+							            </ul>
+
+						            <ul>
+						              <li>Region</li>
+						              <li>New York</li>
+						            </ul>
+
+					          </div>
+					        </div>
+					      </section>
+
+						
+						<!-- LANGUAGE -->
+			      <section class="content">
+			        <div class="row">
+			          <div class="content-cat">
+			           Languages
+			          </div>
+			          <div class="content-text">
+
+				            <ul>
+											
+				              	<li>Python</li>
+
+				              <li>Extremely Proficient</li>
+
+				            </ul>
+				            <ul>
+											
+				              	<li>Javascript</li>
+
+				              <li>Very Proficient</li>
+
+				            </ul>
+				            <ul>
+											
+				              	<li>Java</li>
+
+				              <li>Proficient</li>
+
+				            </ul>
+				            <ul>
+											
+				              	<li>Objective C</li>
+
+				              <li>Proficient</li>
+
+				            </ul>
+				            <ul>
+											
+				              	<li>Swift</li>
+
+				              <li>Proficient</li>
+
+				            </ul>
+				            <ul>
+											
+				              	<li>C</li>
+
+				              <li>Proficient</li>
+
+				            </ul>
+				            <ul>
+											
+				              	<li>HTML/CSS</li>
+
+				              <li>Proficient</li>
+
+				            </ul>
+
+			          </div>
+			        </div>
+			      </section>
+
+			      <section class="content">
+			        <div class="row">
+			          <div class="content-cat">
+			            Skills
+			          </div>
+			          <div class="content-text skills-listing">
+			            	<p>
+			            	<span class="name">
+											<strong>
+											Web Development:
+
+											</strong>
+			            	</span>
+
+		                	<span></span>
+
+												GAE, Motor, Tornado, Angular JS, Databench, Google Maps API
+			            	</p>
+			            	<p>
+			            	<span class="name">
+											<strong>
+											API Development:
+
+											</strong>
+			            	</span>
+
+		                	<span></span>
+
+												Spark, GCE, BigQuery, AWS, Redshift, MongoDB, Reddis, MapReduce for AppEngine, NLTK, scikit-learn
+			            	</p>
+			            	<p>
+			            	<span class="name">
+											<strong>
+											iOS Native Applications:
+
+											</strong>
+			            	</span>
+
+		                	<span></span>
+
+												Swift, Objective C, Xcode, ArcGIS SDK
+			            	</p>
+			          </div>
+			        </div>
+			      </section>
+
+			      <!-- PROFILES -->
+				      <section class="content profiles">
+				        <div class="row">
+				          <div class="content-cat">
+				           Profiles
+				          </div>
+				          <div class="content-text profiles-listing">
+				            <ul>
+					              	<li>
+					              	<a href="http://twitter.com/isambatman" target="_blank">
+							                	Twitter
+							                </a>
+							            </li>
+					              	<li>
+					              	<a href="https://www.linkedin.com/pub/sam-cunningham/13/282/353" target="_blank">
+							                	LinkedIn
+							                </a>
+							            </li>
+				            </ul>
+				          </div>
+				        </div>
+				      </section>
+			<section class="content">
+			        <div class="row">
+			          <div class="content-cat big-text">
+											Work	Experience
+			          
+			            		<p>04-2015 till present</p>
+
+			          </div>
+			          <div class="content-text work-listing education-listing">
+					            <p style="margin-top:2.4em;">
+													<strong>Senior Engineer</strong> at <strong><a href="https://trywildcard.com">Wildcard:</a></strong>
+					            </p>
+
+											<p>Wildcard is a news aggregation app that leverages ML, mobile and schema technology for a clean reading experience, and customized content. </p>
+
+												<p class="highlight">Architected & Implemented Data Pipeline</p>
+												<p class="highlight">Enhanced ML Data Extraction Algorithms</p>
+												<p class="highlight">
+													Major contributor to backend platform
+												</p>
+												<p class="highlight"> Implemented iOS Map Card
+												</p>
+												<p class="highlight">Built Data Collection and Management Tools</p>
+												<p class="highlight">Managed Overseas Data Collection Team</p>
+			          </div>
+			        </div>
+			      </section>
+			<section class="content">
+			        <div class="row">
+			          <div class="content-cat big-text">			          
+			            		<p>06-2014 till 02-2015</p>
+
+			          </div>
+			          <div class="content-text work-listing education-listing">
+					            <p style="margin-top:2.4em;">
+													<strong>CTO</strong> at <strong><a href="http://adnucleus.appspot.com/lander/index.html">Adnucleus:</a></strong>
+					            </p>
+
+											<p>Adnucleus is an audience creation and ad delivery platform. Adnucleus allows you to build audiences from a set of base demographic data, target those audiences in specific regions of the U.S., and deliver display or video ads to your target audience. </p>
+
+												<p class="highlight">Architected and implemented data rollup and tag system</p>
+												<p class="highlight">Implemented completely RESTful architecture</p>
+												<p class="highlight">Architected and implemented NLP based Audience Insight Generator</p>
+
+									
+			          </div>
+			        </div>
+			      </section>
+
+			      <section class="content work-content">
+			        <div class="row">
+			          <div class="content-cat big-text">			          
+			            		<p>06-2014 till present</p>
+			          </div>
+			          <div class="content-text work-listing education-listing">
+					            <p>
+													<strong>Technical Consultant</strong> at <strong><a href="http://yougee.com">Yougee:</a></strong>
+					            </p>
+
+											<p>Yougee is an iOS application for finding farms, farmers markets, and restaurants. Yougee lets you filter locations on a list of criteria e.g. organic, non-gmo, vegan, etc. It also has a rewards program for businesses that fit one of the Yougee criteria.</p>
+
+												<p class="highlight">Architected and implemented iOS application</p>
+												<p class="highlight">
+												Architected and implented web interface and backend</p>
+
+									
+			          </div>
+			        </div>
+			      </section>
+				
+
+				<section class="content work-content">
+			        <div class="row">
+			          <div class="content-cat big-text">
+			          
+			            		<p>07-2012 till 06-2014</p>
+
+			          </div>
+			          <div class="content-text work-listing education-listing">
+					            <p>
+													<strong>VP of Engineering</strong> at <strong><a href="http://nearwoo.appspot.com/home/index.html">NearWoo:</a></strong>
+					            </p>
+
+											<p>NearWoo is a location-based mobile ad creation and Demand Side Platform (DSP) for small businesses. Through a seamless self-serve process a small business can create a banner ad, and target it at a hypergranular level anywhere in the U.S.</p>
+
+												<p class="highlight">Architected Real Time Bidding (RTB) System</p>
+												<p class="highlight">Managed and assigned roles for 10+ developers</p>
+												<p class="highlight">Over 5000 local business clients</p>
+												<p class="highlight">Served millions of ads per day</p>
+
+									
+			          </div>
+			        </div>
+			      </section>
+				<section class="content work-content">
+			        <div class="row">
+			          <div class="content-cat big-text">
+			          
+			            		<p>09-2011 till 07-2012</p>
+
+			          </div>
+			          <div class="content-text work-listing education-listing">
+					            <p>
+													<strong>Developer and Project Manager</strong> at <strong><a href="http://esri.com">Esri:</a></strong>
+					            </p>
+
+											<p>Esri is one of the largest and most technically empowered companies in the field of Geographic Information Systems (GIS). Esri works with governments, industry leaders, academics, and nongovernmental organizations (NGOs) providing map based solutions to a variety of technically challenging location problems.</p>
+
+												<p class="highlight">Architected and implemented iOS mapping applications</p>
+												<p class="highlight">Contributed to Esri iOS SDK https://developers.arcgis.com/ios/</p>
+
+									
+			          </div>
+			        </div>
+			      </section>
+			      <section class="content work-content">
+			        <div class="row">
+			          <div class="content-cat big-text">
+			          
+			            		<p>06-2011 till 09-2011</p>
+
+			          </div>
+			          <div class="content-text work-listing education-listing">
+					            <p>
+													<strong>Research Assistant</strong> at <strong> <a href="http://www1.ccls.columbia.edu/~beck/">Columbia University:</a></strong>
+					            </p>
+
+											<p>Dr. Rebecca Passoneau is the director of the Center for Computational Learning Systems (CCLS) at Columbia University and a Senior Research Scientist. </p>
+
+												<p class="highlight">Summarized 100's of papers on conversational pragmatics</p>
+												<p class="highlight">
+													Implemented speech parser and analyzer
+												</p>
+
+									
+			          </div>
+			        </div>
+			      </section>
+
+				
+
+								<section class="content">
+				        <div class="row">
+				          <div class="content-cat big-text">
+
+				            	Education
+
+				            		<p>09-2007 till 05-2011</p>
+
+				          </div>
+				          <div class="content-text work-listing education-listing">
+						            <p class="heading" style="margin-top:2.35em;">Pomona College</p>
+
+				            		<p class="highlight">
+													B.A.
+				            		<i>Computer Science &amp; Linguistics (GPA: 3.8)</i> <br>
+				            		<i> Linguistics Thesis: <small>Negative Polarity Items and Non-Monotonic Exponibles<br> (Awarded Distinction)</small></i><br>
+				            		<i>Computer Science Thesis:<small> Mapping Pomona (iOS)</small></i>
+
+				            		</p>
+
+				          </div>
+				        </div>
+				      </section>
+
+				      <section class="content">
+				        <div class="row">
+				          <div class="content-cat big-text">
+				            	Awards and Events
+
+				            	<p>Red Herring 100 Top Companies</p>
+				            	<p style="margin-top:0.25em;">2014</p>
+				            	<p>Silicon Beach Fest </p>
+				            	<p style="margin-top:0.25em;">06-2014</p>
+				            	<p>Uncubed CTO Panel</p>
+				            	<p style="margin-top:0.25em;">01-2014</p>
+				            	
+
+				          </div>
+				          <div class="content-text work-listing">
+
+				          		<strong><p class="heading"> Apple's Best Apps of 2015 (19)</p></strong>
+
+				          		<p class="highlight">http://time.com/4143145/best-iphone-apps-2015/</p>
+
+				          		<strong><p class="heading">Red Herring</p></strong>
+
+				            	<p class="highlight">http://www.redherring.com/events/top-100/</p>
+
+				            	<strong><p class="heading"> Silicon Beach Fest (SBF) CTO and Developers Panel</p></strong>
+
+				            	<p class="highlight">http://siliconbeachfest.com/</p>
+
+
+					         	<strong><p class="heading">Uncubed CTO Panel</p></strong>
+
+				            	<p class="highlight">http://la.uncubed.com/</p>
+
+				            	
+				          </div>	
+				          </div>
+				      </section>
+
+			      <section class="content">
+			        <div class="row">
+			          <div class="content-cat">
+			            Interests
+			          </div>
+			          <div class="content-text skills-listing">
+			          		<div class="name" style="padding-left:22px">
+			          			<p>
+					            	<span class="name">
+														<small>Creative Writing, Sailing, Music</small>
+									</span>
+								</p>
+							</div>
+			  
+			          </div>
+			        </div>
+			      </section>
+
+		    </div>
+		      
+		  </article>
+		  
+		</div>
+	</body>
+</html>

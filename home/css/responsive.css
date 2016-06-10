@@ -1,0 +1,141 @@
+/*------------------------------------------------
+*
+*	Table of contents: 
+*	1. Screen resolution 768px+
+*	2. Screen resolution less than 992px
+*	3. Screen resolution less than 768px
+*	4. Screen resolution less than 480px
+*
+-------------------------------------------------*/
+
+/*-------------------------------------------------
+	1. Screen resolution 768px+
+-------------------------------------------------*/
+@media only screen and (min-width: 768px) {
+	.row {
+		overflow: hidden;
+	}
+	.aboutWrapper1, 
+	.aboutWrapper2, 
+	.portfolioWrapper, 
+	.resumeWrapper, 
+	.testimonialWrapper, 
+	.blogWrapper, 
+	.contactWrapper {
+		margin: 0 -25px;
+	}
+	.box-height {
+		padding: 0 25px;
+	}
+	.section-title h2 {
+		position: relative;
+		top: 50%;
+		-webkit-transform: translate(0,-50%);
+		-moz-transform: translate(0,-50%);
+		-ms-transform: translate(0,-50%);
+		-o-transform: translate(0,-50%);
+		transform: translate(0,-50%);
+	}
+	.row-height {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		height: 100%;
+	}
+	.box-height {
+		display: table-cell;
+		float: none;
+		height: 100%;
+		vertical-align: middle;
+	}
+	.about-contact-info {
+		height: 100%;
+	}
+	.services-box {
+		height: 100%;
+	}
+	.social-media-box {
+		height: 100%;
+	}
+	.social-media-box ul {
+		height: 100%;
+	}
+	.social-media-box ul li a i {
+		position: relative;
+		top: 50%;
+		-webkit-transform: translate(0,-50%);
+		-moz-transform: translate(0,-50%);
+		-ms-transform: translate(0,-50%);
+		-o-transform: translate(0,-50%);
+		transform: translate(0,-50%);
+		font-size: 16px;
+	}
+	.input-style div {
+		float: left;
+		width: 50%;
+	}
+	.input-style div:first-child {
+		padding-right: 10px;
+	}
+	.input-style div:last-child {
+		padding-left: 10px;
+	}
+	.submit-result {
+		float: right;
+		padding-top: 50px;
+	}
+	#success, 
+	#error {
+		line-height: 46px;
+	}
+}
+
+
+/*-------------------------------------------------
+	2. Screen resolution less than 992px
+-------------------------------------------------*/
+@media only screen and (max-width: 991px) {
+	.container {
+		width: 100%;
+		padding: 0 50px;
+	}
+}
+
+/*-------------------------------------------------
+	3. Screen resolution less than 768px
+-------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+	.home-background, 
+	.testimonial-background {
+		background-attachment: scroll;
+		background-position: top center !important;
+	}
+	.section-title {
+		margin-bottom: 50px;
+		padding: 50px 30px;
+	}
+	.customNavigation {
+		float: left;
+	}
+	.about-text {
+		margin-bottom: 50px;
+	}
+	.services-box {
+		margin: 50px 0;
+	}
+	.social-media-box ul li a {
+		padding: 50px 30px;
+	}
+	.submit-result {
+		padding-top: 30px;
+	}
+}
+
+/*-------------------------------------------------
+	4. Screen resolution less than 480px
+-------------------------------------------------*/
+@media only screen and (max-width: 479px) {
+	.container {
+		padding: 0 30px;
+	}
+}
